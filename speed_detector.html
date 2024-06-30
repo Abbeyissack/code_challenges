@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+
+    <input type="number" id="speed" min="0">
+    <button onclick="speed_detector()">get comment</button>
+    <p id="speed_comment"></p>
+
+    <script>
+    //    import math;
+       function speed_detector(){
+        speed = document.getElementById("speed").value;
+        if (speed <= 70){
+            comment = "OK";
+        }
+        else{
+            points = Math.round((speed - 70)/5);
+            comment = points;
+            if (points > 12){
+                comment = 'Licence suspended';
+            }
+        }
+        document.getElementById("speed_comment").innerHTML = "Points: "+comment;
+       } 
+       
+            
+    </script>
+</body>
+</html>
