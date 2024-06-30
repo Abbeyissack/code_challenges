@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <label for="salary">Basic Salary</label>
+    <input type="number" id="salary" min="0">
+
+    <label for="benefits">Benefits</label>
+    <input type="number" id="benefits" min="0">
+    <button onclick="calculate_net_salary()">Calculator</button>
+    <p id="salary_value"></p>
+    <p id="benefits_value"></p>
+
+    <script>
+    //    import math;
+    function calculate_net_salary(){
+        salary = document.getElementById("salary").value;
+        benefits = document.getElementById("benefits").value;
+
+        document.getElementById("salary_value").innerHTML = "Salary: " +salary
+        document.getElementById("benefits_value").innerHTML = "Benefits: "+benefits
+        
+    }
+       
+            
+    </script>
+</body>
+</html>
